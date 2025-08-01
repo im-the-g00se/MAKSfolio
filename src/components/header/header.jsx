@@ -20,7 +20,7 @@ export function Header() {
                 <HeaderContactsLink link="https://t.me/the_g00se">
                     <TelegramIcon />
                 </HeaderContactsLink>
-                <HeaderContactsLink page="https://github.com">
+                <HeaderContactsLink page="https://github.com/im-the-g00se">
                     <GitHubIcon />
                 </HeaderContactsLink>
             </div>
