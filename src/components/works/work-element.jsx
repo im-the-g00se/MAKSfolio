@@ -44,7 +44,7 @@ function TextLayout({ title, text, icon, link, skills }) {
                         </SkillItem>
                     ))}
                 </div>
-                <div className="mt-9 text-[#666666]">{text}</div>
+                <div className="mt-9 text-neutral-500">{text}</div>
             </div>
             <a href={link} className="w-fit px-6 py-3 rounded-full bg-black text-white">
                 <ArrowRightIcon/>

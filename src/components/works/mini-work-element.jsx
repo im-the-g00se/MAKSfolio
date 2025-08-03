@@ -20,7 +20,7 @@ export function MiniWorkElement({ info, className }) {
                 <div className="font-semibold text-3xl uppercase wrap-normal">
                     {info.title}
                 </div>
-                <div className="text-[#666666] pr-5 text-sm">{info.text}</div>
+                <div className="text-neutral-500 pr-5 text-sm">{info.text}</div>
             </div>
             <div className="flex justify-between">
                 <SkillItem size="sm">{info.skill}</SkillItem>

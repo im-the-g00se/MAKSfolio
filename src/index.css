@@ -1,17 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap");
 @import "tailwindcss";
 
-/* @theme {
-    /* redefining the line heights, 'cause in figma all lh are set to 100% *
-    --text-xs--line-height: 1;
-    --text-sm--line-height: 1;
-    --text-base--line-height: 1;
-    --text-lg--line-height: 1;
-    --text-xl--line-height: 1;
-    --text-2xl--line-height: 1;
-    --text-3xl--line-height: 1;
-    --text-4xl--line-height: 1;
-} */
+@theme {
+  --color-highlight: rgba(0, 119, 255, 0.20);
+  --color-secondary: #737373;
+}
 
 @layer utilities {
   .no-scrollbar::-webkit-scrollbar {
@@ -22,6 +15,13 @@
     scrollbar-width: none;
   }
 }
+
+/* @layer base {
+  :root {
+    --color-highlight: 0, 119, 255, 0.20;
+    --color-secondary: #737373;
+  }
+} */
 
 * {
     font-family: "Ubuntu Sans", sans-serif;
