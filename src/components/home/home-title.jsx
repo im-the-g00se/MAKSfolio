@@ -26,10 +26,12 @@ function HighlightedText({ className, children, isAnimated = false }) {
     );
 }
 
-function HighlightMarkers({ isMarkerAtBottom = false, markersDotSize = 8, markersWidth = 2}) {
+function HighlightMarkers({
+    isMarkerAtBottom = false
+}) {
     const cls = isMarkerAtBottom
-        ? `absolute top-0 right-0 w-[1px] h-[calc(100%_+_${markersWidth}rem)]`
-        : `-mt-${markersDotSize} w-[1px] h-[calc(100%_+_${markersWidth}rem)]`;
+        ? "absolute top-0 right-0 w-[1px] h-[calc(100%_+_2rem)]"
+        : "-mt-8 w-[1px] h-[calc(100%_+_2rem)]";
     return (
         <div className={cls}>
             <div
@@ -38,8 +40,10 @@ function HighlightMarkers({ isMarkerAtBottom = false, markersDotSize = 8, marker
                     (isMarkerAtBottom ? "flex-col-reverse" : "flex-col")
                 }
             >
-                <div className={`rounded-full size-${markersDotSize} bg-blue-500`} />
-                <div className={`bg-blue-500 w-${markersWidth} grow`} />
+                <div
+                    className="rounded-full size-8 bg-blue-500"
+                />
+                <div className="bg-blue-500 grow w-2" />
             </div>
         </div>
     );

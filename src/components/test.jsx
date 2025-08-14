@@ -1,47 +1,66 @@
-import { useRef } from "react";
+import clsx from "clsx";
 
 export function Test() {
-    const scrollRef = useRef(null);
+    return <HomeTtl />;
+}
 
-    const scroll = function (isOpposite = false) {
-        const container = scrollRef.current;
-        if (!container) return;
-        console.log(container)
-        const amount = 200;
-        container.scrollBy({
-            left: isOpposite ? -amount : amount,
-            behavior: "smooth"
-        });
-    };
+function Testing() {
+    const cls = "-!mt-8"
+    "h!-[calc(100%_+_2rem)]" +
+    "w!-2" +
+    "s!ize-8"
+    return <div className={cls}></div>;
+}
 
+function HomeTtl() {
     return (
-        <div className="w-[1190px] mx-auto ">
-            <div
-                ref={scrollRef}
-                className="flex gap-6 w-full overflow-y-auto snap-x"
-            >
-                <Elem />
-                <Elem />
-                <Elem />
-                <Elem />
-                <Elem />
-                <Elem />
-                <Elem />
-                <Elem />
-                <Elem />
-                <Elem />
-                <Elem />
+        <div className="w-min max-w-full h-[calc(100vh-20rem)] flex flex-col mx-auto justify-center gap-10">
+            <div className="flex flex-col w-max max-w-full mx-auto justify-center items-center gap-3 font-bold uppercase text-nowrap">
+                <p className="text-7xl md:text-nowrap text-center">
+                    привет, я макс
+                </p>
+                <HighlightedText className="md:text-7xl text-5xl">
+                    веб-разработчик
+                </HighlightedText>
             </div>
-            <button onClick={() => scroll(true)}>Влево</button>
-            <button onClick={() => scroll(false)}>Вправо</button>
         </div>
     );
 }
 
-function Elem() {
+function HighlightedText({ className, children, isAnimated = false }) {
+    const cls = isAnimated
+        ? "bg-highlight absolute left-0 w-[1px] group-hover:w-full transition-[width] duration-700 h-full"
+        : "bg-highlight absolute left-0 size-full";
     return (
-        <div className="h-[400px] snap-start w-fit bg-neutral-500 rounded-4xl">
-            <div className="rounded-2xl px-4 pt-4 pb-3 w-85 h-50"></div>
+        <div className={clsx("group flex px-6 relative", className)}>
+            <div className={cls}>
+                <HighlightMarkers isMarkerAtBottom={false} />
+                <HighlightMarkers isMarkerAtBottom={true} />
+            </div>
+            {children}
+        </div>
+    );
+}
+
+function HighlightMarkers({
+    isMarkerAtBottom = false
+}) {
+    const cls = isMarkerAtBottom
+        ? "absolute top-0 right-0 w-[1px] h-[calc(100%_+_2rem)]"
+        : "-mt-8 w-[1px] h-[calc(100%_+_2rem)]";
+    return (
+        <div className={cls}>
+            <div
+                className={
+                    "h-full flex items-center " +
+                    (isMarkerAtBottom ? "flex-col-reverse" : "flex-col")
+                }
+            >
+                <div
+                    className="rounded-full size-8 bg-blue-500"
+                />
+                <div className="bg-blue-500 grow w-2" />
+            </div>
         </div>
     );
 }
