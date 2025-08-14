@@ -1,30 +1,29 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./index.css";
-// import { Ubuntu } from "next/font/google";
-// const ubuntu = Ubuntu({ subsets: ["cyrillic", "latin"] })
 
-import { HomePage, WorksPage, AboutPage, ErrorPage, RedirectPage, TestPage } from "./pages";
+import { Header } from "./components/header";
+import { PageLayout } from "./page-layout";
+
+import { Home } from "./components/home";
+import { Works } from "./components/works";
+import { About } from "./components/about";
+import { Test } from "./components/test";
+import { Error } from "./components/error";
 
 createRoot(document.getElementById("root")).render(
     <StrictMode>
         <Router>
-            <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/works" element={<WorksPage />} />
-                <Route path="/about" element={<AboutPage />} />
-                <Route path="/test" element={<TestPage />} />
-                <Route
-                    path="/tg"
-                    element={<RedirectPage link='https://t.me/the_g00se'/>}
-                />
-                <Route
-                    path="/github"
-                    element={<RedirectPage link='https://t.me'/>}
-                />
-                <Route path="*" element={<ErrorPage />} />
-            </Routes>
+            <PageLayout header={<Header />}>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/works" element={<Works />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/test" element={<Test />} />
+                    <Route path="*" element={<Error />} />
+                </Routes>
+            </PageLayout>
         </Router>
     </StrictMode>
 );

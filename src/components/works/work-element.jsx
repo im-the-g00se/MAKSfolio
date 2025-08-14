@@ -10,7 +10,7 @@ export function WorkElement({ info, className }) {
     const mobile = new URL(info.mobileImg, import.meta.url)
         .href;
     return (
-        <div className={clsx("min-h-[450px] bg-neutral-50 rounded-4xl flex gap-10 w-full", className)}>
+        <div className={clsx("min-h-[450px] bg-neutral-50 rounded-4xl flex justify-between gap-10 w-full", className)}>
             <TextLayout
                 title={info.title}
                 text={info.text}
@@ -44,7 +44,7 @@ function TextLayout({ title, text, icon, link, skills }) {
                         </SkillItem>
                     ))}
                 </div>
-                <div className="mt-9 text-[#666666]">{text}</div>
+                <div className="mt-9 text-neutral-500">{text}</div>
             </div>
             <a href={link} className="w-fit px-6 py-3 rounded-full bg-black text-white">
                 <ArrowRightIcon/>

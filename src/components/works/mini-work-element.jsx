@@ -1,16 +1,10 @@
 // import icon from `./img/${info.name}_icon.png
-import clsx from "clsx";
 import SkillItem from "../ui/skill-item";
 
-export function MiniWorkElement({ info, className }) {
+export function MiniWorkElement({ info }) {
     const image = new URL(info.img, import.meta.url).href;
     return (
-        <div
-            className={clsx(
-                "h-[400px] flex flex-col justify-between bg-neutral-50 rounded-4xl shrink-0 p-4 snap-start w-[calc((100%-(24px*3))/4)]",
-                className
-            )}
-        >
+        <div className="h-f!!it flex flex-col justify-between bg-neutral-50 rounded-4xl shrink-0 p-4 snap-start lg:w-[calc((100%-(1.5rem*3))/4)] md:w-[calc((100%-(1.5rem*2))/3)] w-[calc((100%-(1.5rem))/2)]">
             <div className="">
                 <img
                     src={image}
@@ -20,9 +14,9 @@ export function MiniWorkElement({ info, className }) {
                 <div className="font-semibold text-3xl uppercase wrap-normal">
                     {info.title}
                 </div>
-                <div className="text-[#666666] pr-5 text-sm">{info.text}</div>
+                <div className="text-neutral-500 pr-5 text-sm">{info.text}</div>
             </div>
-            <div className="flex justify-between">
+            <div className="flex justify-between pt-10">
                 <SkillItem size="sm">{info.skill}</SkillItem>
                 <SkillItem size="sm">{info.date}</SkillItem>
             </div>
