@@ -10,7 +10,7 @@ export function WorkElement({ info, className }) {
     const mobile = new URL(info.mobileImg, import.meta.url)
         .href;
     return (
-        <div className={clsx("min-h-[450px] bg-neutral-50 rounded-4xl flex gap-10 w-full", className)}>
+        <div className={clsx("min-h-[450px] bg-neutral-50 rounded-4xl flex justify-between gap-10 w-full", className)}>
             <TextLayout
                 title={info.title}
                 text={info.text}

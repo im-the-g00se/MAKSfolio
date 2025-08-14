@@ -1,5 +1,5 @@
 import SkillItem from "../ui/skill-item";
-import { HomeSkills } from "./home-skills";
+import { HomeLayout } from "./home-layout";
 import { HomeTitle } from "./home-title";
 
 const skillList = [
@@ -19,15 +19,20 @@ const skillList = [
 
 export function Home() {
     return (
-        <div className="w-min h-screen flex flex-col mx-auto justify-center gap-10">
-            <HomeTitle />
-            <HomeSkills
-                skills={skillList.map((skill, index) => (
-                    <SkillItem size="md" key={index}>
-                        {skill}
-                    </SkillItem>
-                ))}
-            />
-        </div>
+        <HomeLayout
+            title={
+                <HomeTitle
+                    line1={
+                        <>привет, <wbr />я макс</>
+                    }
+                    line2={<>веб-разработчик</>}
+                />
+            }
+            skills={skillList.map((skill, index) => (
+                <SkillItem size="md" key={index}>
+                    {skill}
+                </SkillItem>
+            ))}
+        />
     );
 }
