@@ -1,3 +1,4 @@
+import MediaQuery from "react-responsive";
 import { Carousel } from "./carousel";
 import { MiniWorkElement } from "./mini-work-element";
 import { WorkElement } from "./work-element";
@@ -16,27 +17,27 @@ const works = [
             "Git",
         ],
         projLink: "https://ya.ru",
-        iconImg: "./img/GLAZKI_icon.png",
-        desktopImg: "./img/GLAZKI_desktop.png",
-        mobileImg: "./img/GLAZKI_mobile.png",
+        iconImg: new URL("./img/GLAZKI_icon.png", import.meta.url).href,
+        desktopImg: new URL("./img/GLAZKI_desktop.png", import.meta.url).href,
+        mobileImg: new URL("./img/GLAZKI_mobile.png", import.meta.url).href,
     },
     {
         title: "GLAZKI",
         text: "Разработал проект глазки которе попмогает следить за зрением. Использовал джаву, хуяву и еще никарагую. Был в качестве лид-разраба, заставлял работать негров, давал им задачи.",
         skills: ["HTML", "CSS", "JS"],
         projLink: "https://ya.ru",
-        iconImg: "./img/GLAZKI_icon.png",
-        desktopImg: "./img/GLAZKI_desktop.png",
-        mobileImg: "./img/GLAZKI_mobile.png",
+        iconImg: new URL("./img/GLAZKI_icon.png", import.meta.url).href,
+        desktopImg: new URL("./img/GLAZKI_desktop.png", import.meta.url).href,
+        mobileImg: new URL("./img/GLAZKI_mobile.png", import.meta.url).href,
     },
     {
         title: "GLAZKI",
         text: "Разработал проект глазки которе попмогает следить за зрением. Использовал джаву, хуяву и еще никарагую. Был в качестве лид-разраба, заставлял работать негров, давал им задачи.",
         skills: ["HTML", "CSS", "JS"],
         projLink: "https://ya.ru",
-        iconImg: "./img/GLAZKI_icon.png",
-        desktopImg: "./img/GLAZKI_desktop.png",
-        mobileImg: "./img/GLAZKI_mobile.png",
+        iconImg: new URL("./img/GLAZKI_icon.png", import.meta.url).href,
+        desktopImg: new URL("./img/GLAZKI_desktop.png", import.meta.url).href,
+        mobileImg: new URL("./img/GLAZKI_mobile.png", import.meta.url).href,
     },
 ];
 
@@ -47,7 +48,7 @@ const miniWorks = [
         skill: "Webflow",
         date: "Январь 2024",
         projLink: "https://ya.ru",
-        img: "./img/GLAZKI_desktop.png",
+        img: new URL("./img/GLAZKI_desktop.png", import.meta.url).href,
     },
     {
         title: "First session",
@@ -55,7 +56,7 @@ const miniWorks = [
         skill: "Webflow",
         date: "Январь 2024",
         projLink: "https://ya.ru",
-        img: "./img/GLAZKI_desktop.png",
+        img: new URL("./img/GLAZKI_desktop.png", import.meta.url).href,
     },
     {
         title: "First session",
@@ -63,7 +64,7 @@ const miniWorks = [
         skill: "Webflow",
         date: "Январь 2024",
         projLink: "https://ya.ru",
-        img: "./img/GLAZKI_desktop.png",
+        img: new URL("./img/GLAZKI_desktop.png", import.meta.url).href,
     },
     {
         title: "First session",
@@ -71,7 +72,7 @@ const miniWorks = [
         skill: "Webflow",
         date: "Январь 2024",
         projLink: "https://ya.ru",
-        img: "./img/GLAZKI_desktop.png",
+        img: new URL("./img/GLAZKI_desktop.png", import.meta.url).href,
     },
     {
         title: "First session",
@@ -79,7 +80,7 @@ const miniWorks = [
         skill: "Webflow",
         date: "Январь 2024",
         projLink: "https://ya.ru",
-        img: "./img/GLAZKI_desktop.png",
+        img: new URL("./img/GLAZKI_desktop.png", import.meta.url).href,
     },
     {
         title: "First session",
@@ -87,7 +88,7 @@ const miniWorks = [
         skill: "Webflow",
         date: "Январь 2024",
         projLink: "https://ya.ru",
-        img: "./img/GLAZKI_desktop.png",
+        img: new URL("./img/GLAZKI_desktop.png", import.meta.url).href,
     },
     {
         title: "First session",
@@ -95,7 +96,7 @@ const miniWorks = [
         skill: "Webflow",
         date: "Январь 2024",
         projLink: "https://ya.ru",
-        img: "./img/GLAZKI_desktop.png",
+        img: new URL("./img/GLAZKI_desktop.png", import.meta.url).href,
     },
     {
         title: "First session",
@@ -103,7 +104,7 @@ const miniWorks = [
         skill: "Webflow",
         date: "Январь 2024",
         projLink: "https://ya.ru",
-        img: "./img/GLAZKI_desktop.png",
+        img: new URL("./img/GLAZKI_desktop.png", import.meta.url).href,
     },
     {
         title: "First session",
@@ -111,30 +112,41 @@ const miniWorks = [
         skill: "Webflow",
         date: "Январь 2024",
         projLink: "https://ya.ru",
-        img: "./img/GLAZKI_desktop.png",
+        img: new URL("./img/GLAZKI_desktop.png", import.meta.url).href,
     },
 ];
 
 export function Works() {
     return (
-        <WorksLayout
-            worksTitle={"Последние проекты"}
-            worksContent={works.map((item, index) => (
-                <WorkElement
-                    info={item}
-                    key={index}
-                    className={index !== 0 && "mt-11"}
-                />
-            ))}
-            miniWorksTitle={"Мини-проекты"}
-            miniWorksContent={
-                <Carousel>
-                    {miniWorks.map((item, index) => (
-                        <MiniWorkElement info={item} key={index} />
-                    ))}
-                </Carousel>
-            }
-        />
+        <>
+        <MediaQuery minWidth={1200}>
+            <WorksLayout
+                worksTitle={"Последние проекты"}
+                worksContent={works.map((item, index) => (
+                    <WorkElement
+                        info={item}
+                        key={index}
+                        className={index !== 0 && "mt-11"}
+                    />
+                ))}
+                miniWorksTitle={"Мини-проекты"}
+                miniWorksContent={
+                    <Carousel>
+                        {miniWorks.map((item, index) => (
+                            <MiniWorkElement info={item} key={index} />
+                        ))}
+                    </Carousel>
+                }
+            />
+        </MediaQuery>
+        <MediaQuery maxWidth={1199} minWidth={425}>
+
+        </MediaQuery>
+        <MediaQuery maxWidth={424}>
+            
+        </MediaQuery>
+               </>
+
     );
 }
 

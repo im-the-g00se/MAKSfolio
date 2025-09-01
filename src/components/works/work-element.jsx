@@ -4,21 +4,21 @@ import SkillItem from "../ui/skill-item";
 import { ArrowRightIcon } from "./icons/arrow-right";
 
 export function WorkElement({ info, className }) {
-    const icon = new URL(info.iconImg, import.meta.url).href;
-    const desktop = new URL(info.desktopImg, import.meta.url)
-        .href;
-    const mobile = new URL(info.mobileImg, import.meta.url)
-        .href;
+    // const icon = new URL(info.iconImg, import.meta.url).href;
+    // const desktop = new URL(info.desktopImg, import.meta.url)
+    //     .href;
+    // const mobile = new URL(info.mobileImg, import.meta.url)
+    //     .href;
     return (
         <div className={clsx("min-h-[450px] bg-neutral-50 rounded-4xl flex justify-between gap-10 w-full", className)}>
             <TextLayout
                 title={info.title}
                 text={info.text}
-                icon={icon}
+                icon={info.iconImg}
                 link={info.projLink}
                 skills={info.skills}
             />
-            <ImagesLayout desktop_img={desktop} mobile_img={mobile} />
+            <ImagesLayout desktop_img={info.desktopImg} mobile_img={info.mobileImg} />
         </div>
     );
 }
