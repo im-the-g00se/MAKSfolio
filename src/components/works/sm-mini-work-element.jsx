@@ -1,7 +1,7 @@
 // import icon from `./img/${info.name}_icon.png
 import SkillItem from "../ui/skill-item";
 
-export function MiniWorkElement({ info }) {
+export function SmMiniWorkElement({ info }) {
     return (
         <div className="h-f!!it flex flex-col justify-between bg-neutral-50 rounded-4xl shrink-0 p-4 snap-start lg:w-[calc((100%-(1.5rem*3))/4)] md:w-[calc((100%-(1.5rem*2))/3)] w-[calc((100%-(1.5rem))/2)]">
             <div className="">
@@ -15,7 +15,7 @@ export function MiniWorkElement({ info }) {
                 </div>
                 <div className="text-neutral-500 pr-5 text-sm">{info.text}</div>
             </div>
-            <div className="flex justify-between items-end gap-5 pt-10">
+            <div className="flex items-center  flex-col gap-3 pt-10">
                 <SkillItem size="sm">{info.skill}</SkillItem>
                 <SkillItem size="sm">{info.date}</SkillItem>
             </div>
