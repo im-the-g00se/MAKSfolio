@@ -43,24 +43,16 @@
 
 @media only screen and (max-width: 768px) {
   html {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 
 @media only screen and (max-width: 425px) {
   html {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 
-@media only screen and (max-width: 300px) {
-  html {
-    font-size: 8px;
-  }
+html {
+  min-width: 320px;
 }
-
-/* @media only screen and (max-width: 500px) {
-  html {
-    font-size: 8px;
-  }
-} */
