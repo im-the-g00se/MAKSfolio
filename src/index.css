@@ -5,9 +5,9 @@
   --color-highlight: rgba(0, 119, 255, 0.20);
   --color-secondary: #737373;
   --breakpoint-xs: 300px;
-  --breakpoint-sm: 425px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 1280px;
+  --breakpoint-sm: 550px;
+  --breakpoint-md: 800px;
+  --breakpoint-lg: 1200px;
   --breakpoint-xl: 1440px;
   --breakpoint-2xl: 1920px;
   /* --breakpoint-3xl: 120rem; */
@@ -23,36 +23,7 @@
   }
 }
 
-/* @layer base {
-  :root {
-    --color-highlight: 0, 119, 255, 0.20;
-    --color-secondary: #737373;
-  }
-} */
-
 * {
     font-family: "Ubuntu Sans", sans-serif;
     line-height: 1.2;
-}
-
-@media only screen and (max-width: 1200px) {
-  html {
-    font-size: 14px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  html {
-    font-size: 13px;
-  }
-}
-
-@media only screen and (max-width: 425px) {
-  html {
-    font-size: 12px;
-  }
-}
-
-html {
-  min-width: 320px;
 }

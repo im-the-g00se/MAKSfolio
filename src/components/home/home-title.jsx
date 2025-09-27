@@ -3,8 +3,8 @@ import clsx from "clsx";
 export function HomeTitle({ line1, line2 }) {
     return (
         <div className="flex flex-col w-max max-w-full mx-auto justify-center items-center gap-6 font-bold uppercase text-nowrap">
-            <p className="text-7xl md:text-nowrap text-center">{line1}</p>
-            <HighlightedText className="md:text-7xl text-5xl">
+            <p className="text-6xl md:text-nowrap text-center">{line1}</p>
+            <HighlightedText className="md:text-6xl text-4xl">
                 {line2}
             </HighlightedText>
         </div>

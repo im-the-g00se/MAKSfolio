@@ -141,10 +141,10 @@ export function Works() {
                 }
             />
         </MediaQuery>
-        <MediaQuery maxWidth={1199} minWidth={425}>
+        <MediaQuery maxWidth={1199} minWidth={550}>
 
         </MediaQuery>
-        <MediaQuery maxWidth={424}>
+        <MediaQuery maxWidth={549}>
             <WorksLayout
                 worksTitle={"Последние проекты"}
                 worksContent={works.map((item, index) => (
