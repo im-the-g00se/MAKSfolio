@@ -11,6 +11,7 @@ import { Works } from "./components/works";
 import { About } from "./components/about";
 import { Test } from "./components/test";
 import { Error } from "./components/error";
+import { AddWorks } from "./components/add-works";
 
 createRoot(document.getElementById("root")).render(
     <StrictMode>
@@ -21,6 +22,7 @@ createRoot(document.getElementById("root")).render(
                     <Route path="/works" element={<Works />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/test" element={<Test />} />
+                    <Route path="/add-works" element={<AddWorks />} />
                     <Route path="*" element={<Error />} />
                 </Routes>
             </PageLayout>

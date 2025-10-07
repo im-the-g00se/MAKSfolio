@@ -10,6 +10,8 @@ export function About() {
             totemImageSrc={chillGuyImg}
             totemImageAlt="chill guy"
             // prettier-ignore
+            greetingText={<>Привет!</>}
+            // prettier-ignore
             text1={<>Я — Макс, начинающий веб-разработчик,</>}
             // prettier-ignore
             text2={<>человек, <Hl>горящий, а не выгорающий</Hl>, своим делом 🔥</>}
