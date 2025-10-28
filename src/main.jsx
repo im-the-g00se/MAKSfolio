@@ -13,17 +13,19 @@ import { Test } from "./components/test";
 import { Error } from "./components/error";
 import { AddWorks } from "./components/add-works";
 
+const basePath = import.meta.env.BASE_URL;
+
 createRoot(document.getElementById("root")).render(
     <StrictMode>
         <Router>
             <PageLayout header={<Header />}>
                 <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/works" element={<Works />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/test" element={<Test />} />
-                    <Route path="/add-works" element={<AddWorks />} />
-                    <Route path="*" element={<Error />} />
+                    <Route path={basePath + "/"} element={<Home />} />
+                    <Route path={basePath + "/works"} element={<Works />} />
+                    <Route path={basePath + "/about"} element={<About />} />
+                    <Route path={basePath + "/test"} element={<Test />} />
+                    <Route path={basePath + "/add-works"} element={<AddWorks />} />
+                    <Route path={basePath + "*"} element={<Error />} />
                 </Routes>
             </PageLayout>
         </Router>
