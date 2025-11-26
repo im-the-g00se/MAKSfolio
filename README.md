@@ -4,8 +4,8 @@ This is my portfolio. I'm Max (or Maks in my native language) so my portfolio sh
 
 ## TODO
 
-- [x] Refactor all the code
-- [x] Make an autofiller for projects and mini-projects
+- [ ] Refactor all the code
+- [ ] Make an autofiller for projects and mini-projects
 - [ ] Add mobile version
 - [ ] Make the design adaptive
 - [ ] Publish all of the projects
