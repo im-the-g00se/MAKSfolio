@@ -1,10 +1,12 @@
 {
   "name": "maksfolio",
+  "homepage": "https://im-the-g00se.github.io/MAKSfolio",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev-host": "vite --host",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -14,6 +16,8 @@
     "clsx": "^2.1.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-dropzone": "^14.3.8",
+    "react-responsive": "^10.0.1",
     "react-router-dom": "^7.7.0",
     "tailwindcss": "^4.1.11"
   },

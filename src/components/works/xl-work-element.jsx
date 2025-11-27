@@ -4,21 +4,31 @@ import SkillItem from "../ui/skill-item";
 import { ArrowRightIcon } from "./icons/arrow-right";
 
 export function WorkElement({ info, className }) {
-    const icon = new URL(info.iconImg, import.meta.url).href;
-    const desktop = new URL(info.desktopImg, import.meta.url)
-        .href;
-    const mobile = new URL(info.mobileImg, import.meta.url)
-        .href;
+    // const icon = new URL(info.iconImg, import.meta.url).href;
+    // const desktop = new URL(info.desktopImg, import.meta.url)
+    //     .href;
+    // const mobile = new URL(info.mobileImg, import.meta.url)
+    //     .href;
     return (
-        <div className={clsx("min-h-[450px] bg-neutral-50 rounded-4xl flex gap-10 w-full", className)}>
+        <div className={clsx("min-h-[450px] bg-neutral-50 rounded-4xl flex justify-between gap-10 w-full", className)}>
             <TextLayout
                 title={info.title}
                 text={info.text}
-                icon={icon}
+                icon={info.iconImg && (
+                        <img
+                            src={info.iconImg}
+                            alt="icon"
+                            className="aspect-square h-11 object-cover mr-3"
+                        />
+                    )}
                 link={info.projLink}
-                skills={info.skills}
+                skills={info.skills.map((skill, index) => (
+                        <SkillItem size="sm" key={index}>
+                            {skill}
+                        </SkillItem>
+                    ))}
             />
-            <ImagesLayout desktop_img={desktop} mobile_img={mobile} />
+            <ImagesLayout desktop_img={info.desktopImg} mobile_img={info.mobileImg} />
         </div>
     );
 }
@@ -28,23 +38,13 @@ function TextLayout({ title, text, icon, link, skills }) {
         <div className=" mt-11 ml-11 mb-11 flex flex-col justify-between">
             <div className="">
                 <div className="flex font-bold text-5xl items-center">
-                    {icon && (
-                        <img
-                            src={icon}
-                            alt="icon"
-                            className="aspect-square h-11 object-cover mr-3"
-                        />
-                    )}
+                    {icon}
                     <div className="uppercase">{title}</div>
                 </div>
                 <div className="mt-3 flex flex-wrap gap-x-[6px] gap-y-3 w-full">
-                    {skills.map((skill, index) => (
-                        <SkillItem size="sm" key={index}>
-                            {skill}
-                        </SkillItem>
-                    ))}
+                    {skills}
                 </div>
-                <div className="mt-9 text-[#666666]">{text}</div>
+                <div className="my-9 text-neutral-500">{text}</div>
             </div>
             <a href={link} className="w-fit px-6 py-3 rounded-full bg-black text-white">
                 <ArrowRightIcon/>

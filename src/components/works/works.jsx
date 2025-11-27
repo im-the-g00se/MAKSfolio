@@ -1,13 +1,14 @@
-import { useRef } from "react";
-import { MiniWorkElement } from "./mini-work-element";
-import { WorkElement } from "./work-element";
-import { ScrollArrowLeftIcon } from "./icons/scroll-arrow-left";
-import { ScrollArrowRightIcon } from "./icons/scroll-arrow-right";
+// import MediaQuery from "react-responsive";
+import { Carousel } from "./carousel";
+import { WorksLayout } from "./works-layout";
+
+import { ResponsiveMiniWorkElement } from "./responsive-mini-work-element";
+import { ResponsiveWorkElement } from "./responsive-work-element";
 
 const works = [
     {
-        title: "GLAZKI",
-        text: "Разработал проект глазки которе попмогает следить за зрением. Использовал джаву, хуяву и еще никарагую. Был в качестве лид-разраба, заставлял работать негров, давал им задачи.",
+        title: "GLAZKIlongname",
+        text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec q",
         skills: [
             "JavaScript",
             "React",
@@ -17,27 +18,45 @@ const works = [
             "Git",
         ],
         projLink: "https://ya.ru",
-        iconImg: "./img/GLAZKI_icon.png",
-        desktopImg: "./img/GLAZKI_desktop.png",
-        mobileImg: "./img/GLAZKI_mobile.png",
+        desktopImg: new URL("./img/GLAZKI_desktop.png", import.meta.url).href,
+        mobileImg: new URL("./img/GLAZKI_mobile.png", import.meta.url).href,
+    },
+    {
+        title: "GLAZKI 1",
+        text: "Разработал проект глазки которе попмогает следить за зрением. Использовал джаву, хуяву и еще никарагую. Был в качестве лид-разраба, заставлял работать негров, давал им задачи. Разработал проект глаз",
+        skills: [
+            "JavaScript",
+            "React",
+            "Tailwind CSS",
+            "Figma",
+            "Node.js",
+            "Git",
+        ],
+        projLink: "https://ya.ru",
+        desktopImg: new URL("./img/GLAZKI_desktop.png", import.meta.url).href,
+        mobileImg: new URL("./img/GLAZKI_mobile.png", import.meta.url).href,
+    },
+    {
+        title: "GLAZKI",
+        text: "Разработал проект глазки которе попмогает следить за зрением.",
+        skills: ["HTML", "CSS", "JS"],
+        projLink: "https://ya.ru",
+        desktopImg: new URL("./img/GLAZKI_desktop.png", import.meta.url).href,
+        mobileImg: new URL("./img/GLAZKI_mobile.png", import.meta.url).href,
     },
     {
         title: "GLAZKI",
         text: "Разработал проект глазки которе попмогает следить за зрением. Использовал джаву, хуяву и еще никарагую. Был в качестве лид-разраба, заставлял работать негров, давал им задачи.",
         skills: ["HTML", "CSS", "JS"],
         projLink: "https://ya.ru",
-        iconImg: "./img/GLAZKI_icon.png",
-        desktopImg: "./img/GLAZKI_desktop.png",
-        mobileImg: "./img/GLAZKI_mobile.png",
+        mobileImg: new URL("./img/GLAZKI_mobile.png", import.meta.url).href,
     },
     {
         title: "GLAZKI",
         text: "Разработал проект глазки которе попмогает следить за зрением. Использовал джаву, хуяву и еще никарагую. Был в качестве лид-разраба, заставлял работать негров, давал им задачи.",
         skills: ["HTML", "CSS", "JS"],
         projLink: "https://ya.ru",
-        iconImg: "./img/GLAZKI_icon.png",
-        desktopImg: "./img/GLAZKI_desktop.png",
-        mobileImg: "./img/GLAZKI_mobile.png",
+        desktopImg: new URL("./img/GLAZKI_desktop.png", import.meta.url).href,
     },
 ];
 
@@ -45,10 +64,10 @@ const miniWorks = [
     {
         title: "GLAZKI",
         text: "CSS spin preloader + preload Page i am testing how the word wrap works hope it's okay and i won't have to remake it",
-        skill: "Webflow",
+        skill: "WebflowWebflowWebflow",
         date: "Январь 2024",
         projLink: "https://ya.ru",
-        img: "./img/GLAZKI_desktop.png",
+        img: new URL("./img/GLAZKI_desktop.png", import.meta.url).href,
     },
     {
         title: "First session",
@@ -56,7 +75,7 @@ const miniWorks = [
         skill: "Webflow",
         date: "Январь 2024",
         projLink: "https://ya.ru",
-        img: "./img/GLAZKI_desktop.png",
+        img: new URL("./img/GLAZKI_desktop.png", import.meta.url).href,
     },
     {
         title: "First session",
@@ -64,7 +83,7 @@ const miniWorks = [
         skill: "Webflow",
         date: "Январь 2024",
         projLink: "https://ya.ru",
-        img: "./img/GLAZKI_desktop.png",
+        img: new URL("./img/GLAZKI_desktop.png", import.meta.url).href,
     },
     {
         title: "First session",
@@ -72,7 +91,7 @@ const miniWorks = [
         skill: "Webflow",
         date: "Январь 2024",
         projLink: "https://ya.ru",
-        img: "./img/GLAZKI_desktop.png",
+        img: new URL("./img/GLAZKI_desktop.png", import.meta.url).href,
     },
     {
         title: "First session",
@@ -80,7 +99,7 @@ const miniWorks = [
         skill: "Webflow",
         date: "Январь 2024",
         projLink: "https://ya.ru",
-        img: "./img/GLAZKI_desktop.png",
+        img: new URL("./img/GLAZKI_desktop.png", import.meta.url).href,
     },
     {
         title: "First session",
@@ -88,7 +107,7 @@ const miniWorks = [
         skill: "Webflow",
         date: "Январь 2024",
         projLink: "https://ya.ru",
-        img: "./img/GLAZKI_desktop.png",
+        img: new URL("./img/GLAZKI_desktop.png", import.meta.url).href,
     },
     {
         title: "First session",
@@ -96,7 +115,7 @@ const miniWorks = [
         skill: "Webflow",
         date: "Январь 2024",
         projLink: "https://ya.ru",
-        img: "./img/GLAZKI_desktop.png",
+        img: new URL("./img/GLAZKI_desktop.png", import.meta.url).href,
     },
     {
         title: "First session",
@@ -104,7 +123,7 @@ const miniWorks = [
         skill: "Webflow",
         date: "Январь 2024",
         projLink: "https://ya.ru",
-        img: "./img/GLAZKI_desktop.png",
+        img: new URL("./img/GLAZKI_desktop.png", import.meta.url).href,
     },
     {
         title: "First session",
@@ -112,70 +131,96 @@ const miniWorks = [
         skill: "Webflow",
         date: "Январь 2024",
         projLink: "https://ya.ru",
-        img: "./img/GLAZKI_desktop.png",
+        img: new URL("./img/GLAZKI_desktop.png", import.meta.url).href,
     },
 ];
+
 export function Works() {
     return (
-        <div className="w-[1190px] mx-auto">
-            <div className="uppercase font-semibold text-4xl mb-4">
-                Последние проекты
-            </div>
-            {works.map((item, index) => (
-                <WorkElement
-                    info={item}
-                    key={index}
-                    className={index !== 0 && "mt-11"}
+        <>
+            <WorksLayout
+                    worksTitle={"Последние проекты"}
+                    worksContent={works.map((item, index) => (
+                        <ResponsiveWorkElement
+                            info={item}
+                            key={index}
+                        />
+                    ))}
+                    miniWorksTitle={"Мини-проекты"}
+                    miniWorksContent={
+                        <Carousel>
+                            {miniWorks.map((item, index) => (
+                                <ResponsiveMiniWorkElement info={item} key={index} />
+                            ))}
+                        </Carousel>
+                    }
                 />
-            ))}
-            <div className="uppercase font-semibold text-4xl mb-4 mt-23">
-                Мини-проекты
-            </div>
+        </>
+    );
+}
+
+// import { WorkElement } from "./xl-work-element";
+// import { MiniWorkElement } from "./xl-mini-work-element";
+// import { SmWorkElement } from "./sm-work-element";
+// import { SmMiniWorkElement } from "./sm-mini-work-element";
+
+{/* <MediaQuery minWidth={1200}>
+    <WorksLayout
+        worksTitle={"Последние проекты"}
+        worksContent={works.map((item, index) => (
+            <WorkElement
+                info={item}
+                key={index}
+                className={index !== 0 && "mt-11"}
+            />
+        ))}
+        miniWorksTitle={"Мини-проекты"}
+        miniWorksContent={
             <Carousel>
                 {miniWorks.map((item, index) => (
                     <MiniWorkElement info={item} key={index} />
                 ))}
             </Carousel>
-        </div>
-    );
-}
-
-function Carousel({ className, children }) {
-    const scrollRef = useRef(null);
-
-    const scroll = function (isOpposite = false) {
-        const container = scrollRef.current;
-        if (!container) return;
-        console.log(container);
-        const amount = 200;
-        container.scrollBy({
-            left: isOpposite ? -amount : amount,
-            behavior: "smooth",
-        });
-    };
-
-    return (
-        <div className={className}>
-            <div
-                ref={scrollRef}
-                className="flex gap-6 w-full overflow-x-auto snap-x no-scrollbar"
-            >
-                {children}
-            </div>
-            <div className="flex justify-between mt-4">
-                <button
-                    className="rounded-full bg-neutral-200 size-12 text-neutral-700 hover:text-black flex items-center justify-center"
-                    onClick={() => scroll(true)}
-                >
-                    <ScrollArrowLeftIcon />
-                </button>
-                <button
-                    className="rounded-full bg-neutral-200 size-12 text-neutral-700 hover:text-black flex items-center justify-center"
-                    onClick={() => scroll(false)}
-                >
-                    <ScrollArrowRightIcon />
-                </button>
-            </div>
-        </div>
-    );
-}
+        }
+    />
+</MediaQuery>
+<MediaQuery maxWidth={1199} minWidth={800}>
+    <WorksLayout
+        worksTitle={"Последние проекты"}
+        worksContent={works.map((item, index) => (
+            <WorkElement
+                info={item}
+                key={index}
+                className={index !== 0 && "mt-11"}
+            />
+        ))}
+        miniWorksTitle={"Мини-проекты"}
+        miniWorksContent={
+            <Carousel>
+                {miniWorks.map((item, index) => (
+                    <MiniWorkElement info={item} key={index} />
+                ))}
+            </Carousel>
+        }
+    />
+</MediaQuery>
+<MediaQuery maxWidth={799}>
+    <WorksLayout
+        worksTitle={"Последние проекты"}
+        worksContent={works.map((item, index) => (
+            <SmWorkElement
+                info={item}
+                key={index}
+                className={index !== 0 && "mt-11"}
+            />
+        ))}
+        miniWorksTitle={"Мини-проекты"}
+        miniWorksContent={
+            <Carousel>
+                {miniWorks.map((item, index) => (
+                    <SmMiniWorkElement info={item} key={index} />
+                ))}
+            </Carousel>
+        }
+    />
+</MediaQuery> */}
