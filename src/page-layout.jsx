@@ -7,7 +7,7 @@ export function PageLayout({
     children,
 }) {
     return (
-        <div className="w-full h-max relative">
+        <div className="w-full min-w-[300px] h-max relative">
             <Crosses/>
             {header}
             <main
