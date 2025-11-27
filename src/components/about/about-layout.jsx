@@ -18,17 +18,17 @@ export function AboutLayout({
     messages,
 }) {
     return (
-        <div className="">
+        <div className="max-w-400 mx-auto">
             <MediaQuery minWidth={1200}>
                 <img
                     src={totemImageSrc}
                     alt={totemImageAlt}
                     className="absolute -top-24 right-16 w-1/4"
                 />
-                <div className="ml-[10%] text-3xl uppercase font-medium w-3/5 wrap-normal text-center">
+                <div className="ml-[10%] text-3xl uppercase font-medium w-3/5 wrap-anywhere hyphens-auto text-center" lang="ru">
                     {text1} {text2}
                 </div>
-                <div className="mt-13 ml-[20%] text-3xl uppercase font-medium w-1/2 wrap-normal text-center">
+                <div className="mt-13 ml-[20%] text-3xl uppercase font-medium w-1/2 wrap-anywhere hyphens-auto text-center" lang="ru">
                     {text3} {text4}
                 </div>
                 <AboutMeWindow
@@ -62,14 +62,12 @@ export function AboutLayout({
                 </div>
             </MediaQuery>
             <MediaQuery maxWidth={549}>
-                <div className="grid grid-cols-2 gap-x-5 px-7 gap-y-11 text-3xl font-medium wrap-normal text-center">
-                    <div className="flex flex-col gap-11 pt-10">
-                        <div className="text-4xl font-bold uppercase ">
+                <div className="grid grid-cols-2 gap-x-5 px-7 gap-y-11 text-3xl font-medium wrap-anywhere hyphens-auto text-center" lang="ru">
+                    <div className="text-4xl col-span-2 font-bold uppercase ">
                             {greetingText}
                         </div>
                         <div className="uppercase">{text1}</div>
-                    </div>
-                    <div className="">
+                    <div className="flex items-center">
                         <img
                             src={totemImageSrc}
                             alt={totemImageAlt}

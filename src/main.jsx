@@ -20,7 +20,7 @@ createRoot(document.getElementById("root")).render(
         <Router>
             <PageLayout header={<Header />}>
                 <Routes>
-                    <Route path={basePath + "/"} element={<Home />} />
+                    <Route path={basePath} element={<Home />} />
                     <Route path={basePath + "/works"} element={<Works />} />
                     <Route path={basePath + "/about"} element={<About />} />
                     <Route path={basePath + "/test"} element={<Test />} />

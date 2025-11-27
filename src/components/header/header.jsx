@@ -9,9 +9,9 @@ const basePath = import.meta.env.BASE_URL;
 
 export function Header() {
     return (
-        <div className="fixed top-11 z-50  w-screen">
+        <div className="fixed top-11 z-15  w-screen">
             <div className="mx-auto rounded-full items-center flex gap-3 px-4 py-3 bg-black w-fit">
-                <HeaderTextButton page={basePath + "/"}> Йо </HeaderTextButton>
+                <HeaderTextButton page={basePath}> Йо </HeaderTextButton>
                 <HeaderTextButton page={basePath + "/works"}> Работы </HeaderTextButton>
                 <HeaderTextButton page={basePath + "/about"}> О себе </HeaderTextButton>
                 {TEST_ENABLED && <HeaderTextButton page={basePath + "/test"}>УБЕРИ!ТЕСТ</HeaderTextButton>}

@@ -5,7 +5,7 @@ export function useTextButton(page) {
     const [isActive, setIsActive] = useState(false);
     const location = useLocation();
     useEffect(() => {
-        setIsActive(location.pathname === page);
+        setIsActive((location.pathname === page) || (location.pathname === page + "/"));
     }, [page, location]);
     return isActive;
 }
