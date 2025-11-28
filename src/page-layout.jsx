@@ -9,7 +9,7 @@ export function PageLayout({
             <Crosses/>
             {header}
             <main
-                className="my-40"
+                className="mt-40 mb-20"
             >
                 {children}
             </main>
