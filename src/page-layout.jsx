@@ -2,8 +2,6 @@ import { Crosses } from "./components/crosses";
 
 export function PageLayout({
     header,
-    disableMarginTop = false,
-    disableMarginBottom = false,
     children,
 }) {
     return (
@@ -11,10 +9,7 @@ export function PageLayout({
             <Crosses/>
             {header}
             <main
-                className={
-                    (disableMarginTop || "mt-40 ") +
-                    (disableMarginBottom || "mb-40")
-                }
+                className="my-40"
             >
                 {children}
             </main>
