@@ -3,7 +3,7 @@ import SkillItem from "../ui/skill-item";
 
 export function ResponsiveMiniWorkElement({ info }) {
     return (
-        <div className="flex flex-col justify-between bg-neutral-50 rounded-4xl shrink-0 p-4 snap-start lg:w-[calc((100%-(1.5rem*3))/4)] md:w-[calc((100%-(1.5rem*2))/3)] w-[calc((100%-(1.5rem))/2)]">
+        <div className="flex flex-col gap-4 justify-between bg-neutral-50 rounded-4xl shrink-0 p-4 snap-start lg:w-[calc((100%-(1.5rem*3))/4)] md:w-[calc((100%-(1.5rem*2))/3)] w-[calc((100%-(1.5rem))/2)]">
             <div className="">
                 <img
                     src={info.img}
@@ -15,7 +15,7 @@ export function ResponsiveMiniWorkElement({ info }) {
                 </div>
                 <div className="text-neutral-500 pr-5 text-sm">{info.text}</div>
             </div>
-            <div className="flex md:justify-between md:items-end md:gap-5 items-center flex-col gap-3 pt-10">
+            <div className="flex md:justify-between md:items-end items-center flex-col md:flex-row gap-3 md:gap-0.5">
                 <SkillItem size="sm">{info.skill}</SkillItem>
                 <SkillItem size="sm">{info.date}</SkillItem>
             </div>

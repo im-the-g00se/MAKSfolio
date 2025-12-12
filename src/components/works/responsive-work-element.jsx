@@ -16,8 +16,8 @@ export function ResponsiveWorkElement({ info, className }) {
                     {skill}
                 </SkillItem>
             ))}
-            desktop_img={info.desktopImg}
-            mobile_img={info.mobileImg}
+            desktop_img={info.desktopImg || new URL("./img/no_desktop.png", import.meta.url).href}
+            mobile_img={info.mobileImg || new URL("./img/no_mobile.png", import.meta.url).href}
         />
     );
 }
