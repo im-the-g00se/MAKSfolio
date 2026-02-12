@@ -1,0 +1,12 @@
+{
+    "name": "сайт-портфолио",
+    "isMiniProject": false,
+    "topics": [
+        "React",
+        "JavaScript",
+        "Tailwind CSS",
+        "Vite"
+    ],
+    "description": "тот сайт, который вы сейчас видите перед собой. дизайн (tg): @fluedacomp"
+
+}
