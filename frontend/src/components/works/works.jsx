@@ -22,17 +22,15 @@ const works = [
         mobileImg: new URL("./img/GLAZKI_mobile.png", import.meta.url).href,
     },
     {
-        title: "GLAZKI 1",
-        text: "Разработал проект глазки которе попмогает следить за зрением. Использовал джаву, хуяву и еще никарагую. Был в качестве лид-разраба, заставлял работать негров, давал им задачи. Разработал проект глаз",
+        title: "MAKSfolio",
+        text: "Тот сайт, который вы сейчас видите перед собой. \nДизайн (tg): @fluedacomp",
         skills: [
             "JavaScript",
             "React",
             "Tailwind CSS",
-            "Figma",
             "Node.js",
-            "Git",
+            "GitHub Pages"
         ],
-        projLink: "https://ya.ru",
         desktopImg: new URL("./img/GLAZKI_desktop.png", import.meta.url).href,
         mobileImg: new URL("./img/GLAZKI_mobile.png", import.meta.url).href,
     },
@@ -46,17 +44,10 @@ const works = [
     },
     {
         title: "GLAZKI",
-        text: "Разработал проект глазки которе попмогает следить за зрением. Использовал джаву, хуяву и еще никарагую. Был в качестве лид-разраба, заставлял работать негров, давал им задачи.",
-        skills: ["HTML", "CSS", "JS"],
-        projLink: "https://ya.ru",
-        mobileImg: new URL("./img/GLAZKI_mobile.png", import.meta.url).href,
-    },
-    {
-        title: "GLAZKI",
-        text: "Разработал проект глазки которе попмогает следить за зрением. Использовал джаву, хуяву и еще никарагую. Был в качестве лид-разраба, заставлял работать негров, давал им задачи.",
-        skills: ["HTML", "CSS", "JS"],
-        projLink: "https://ya.ru",
+        text: "В команде разработал программу-напоминалку о разминках для глаз. Программа также содержала набор упражнений с визуализацией. \nВ рамках проекта впервые попробовал быть тимлидом, следил за прогрессом команды и распределял задачи.",
+        skills: ["PyQt6"],
         desktopImg: new URL("./img/GLAZKI_desktop.png", import.meta.url).href,
+        mobileImg: new URL("./img/GLAZKI_mobile.png", import.meta.url).href,
     },
 ];
 

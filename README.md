@@ -14,10 +14,11 @@ npm run dev
 
 ## TODO
 
-- [ ] Refactor all the code
-- [ ] Make an autofiller for projects and mini-projects
-- [x] Add mobile version
-- [x] Make the design adaptive
-- [ ] Publish all of the projects
-- [ ] (?) Make a project autofiller which pulls them from my Github
-- [ ] Publish the portfolio
+- [ ] Заполнить template нынешними проектами 
+- [ ] Дописать бэкенд
+- [ ] Перевести бэк на api
+- [ ] Настроить env
+- [ ] Добавить vite proxy для соединения бэка с ручкой api/
+- [ ] Добавить запросы в api/ во фронте и корректную отработку ошибок
+- [ ] Исправить генерацию изображений (см. отчет кодекса)
+- [ ] (?) Добавить автотесты
