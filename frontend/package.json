@@ -1,7 +1,6 @@
 {
   "name": "maksfolio",
   "homepage": "https://im-the-g00se.github.io/MAKSfolio",
-  "private": true,
   "version": "0.1.0",
   "type": "module",
   "scripts": {
