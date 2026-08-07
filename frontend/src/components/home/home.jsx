@@ -3,18 +3,19 @@ import { HomeLayout } from "./home-layout";
 import { HomeTitle } from "./home-title";
 
 const skillList = [
+    "React",
+    "JavaScript",
+    "TypeScript",
     "HTML",
     "CSS",
-    "JavaScript",
-    "React",
     "Tailwind CSS",
     "Figma",
     "Node.js",
     "Git",
-    "Python",
+    "CI/CD",
     "PostgreSQL",
-    "FastAPI",
-    "Apache",
+    "Jest",
+    "Docker",
 ];
 
 export function Home() {

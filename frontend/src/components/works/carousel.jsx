@@ -1,18 +1,22 @@
-import { useRef } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import { ArrowRightIcon } from "./icons/arrow-right";
 
 export function Carousel({ children }) {
-    const [scrollRef, scroll] = useScroll();
+    const [scrollRef, scroll, isOverflowing] = useScroll(children);
 
     return (
         <div>
             <div
                 ref={scrollRef}
-                className="flex gap-6 w-full overflow-x-auto snap-x no-scrollbar"
+                className={`flex gap-6 w-full ${
+                    isOverflowing
+                        ? "overflow-x-auto snap-x no-scrollbar"
+                        : "overflow-visible justify-center"
+                }`}
             >
                 {children}
             </div>
-            <ScrollButtons scroll={scroll}/>
+            {isOverflowing && <ScrollButtons scroll={scroll} />}
         </div>
     );
 }
@@ -36,8 +40,28 @@ function ScrollButtons({scroll}) {
     )
 }
 
-function useScroll() {
+function useScroll(children) {
     const scrollRef = useRef(null);
+    const [isOverflowing, setIsOverflowing] = useState(false);
+
+    useLayoutEffect(() => {
+        const container = scrollRef.current;
+        if (!container) return;
+
+        const updateOverflow = () => {
+            setIsOverflowing(container.scrollWidth > container.clientWidth);
+        };
+
+        updateOverflow();
+
+        const resizeObserver = new ResizeObserver(updateOverflow);
+        resizeObserver.observe(container);
+        Array.from(container.children).forEach((child) => {
+            resizeObserver.observe(child);
+        });
+
+        return () => resizeObserver.disconnect();
+    }, [children]);
 
     const scroll = function (isOpposite = false) {
         const container = scrollRef.current;
@@ -49,5 +73,5 @@ function useScroll() {
         });
     };
 
-    return [scrollRef, scroll];
+    return [scrollRef, scroll, isOverflowing];
 }
