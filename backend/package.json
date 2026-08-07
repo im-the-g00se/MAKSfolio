@@ -14,9 +14,6 @@
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/im-the-g00se/MAKSfolio-backend/issues"
-  },
   "homepage": "https://github.com/im-the-g00se/MAKSfolio-backend#readme",
   "devDependencies": {
     "dotenv": "^17.2.3",
