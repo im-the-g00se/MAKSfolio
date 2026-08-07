@@ -11,7 +11,6 @@ import { Works } from "./components/works";
 import { About } from "./components/about";
 import { Test } from "./components/test";
 import { Error } from "./components/error";
-import { AddWorks } from "./components/add-works";
 
 const basePath = import.meta.env.BASE_URL;
 
@@ -24,7 +23,6 @@ createRoot(document.getElementById("root")).render(
                     <Route path={basePath + "/works"} element={<Works />} />
                     <Route path={basePath + "/about"} element={<About />} />
                     <Route path={basePath + "/test"} element={<Test />} />
-                    <Route path={basePath + "/add-works"} element={<AddWorks />} />
                     <Route path={basePath + "*"} element={<Error />} />
                 </Routes>
             </PageLayout>
